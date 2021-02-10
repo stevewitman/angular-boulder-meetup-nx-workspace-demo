@@ -1,94 +1,78 @@
+# 'abm' - Nx workspace with Angular apps ...  repo from live code demo
 
+This demo project was created during an online presentation at the [Angular Boulder Meetup](https://www.meetup.com/angularboulder/events/276028762/) on Feb 9, 2021.
 
-# Abm
+**Title:** *Nx Workspaces with ANGULAR (by Steve Witman)*
 
-This project was generated using [Nx](https://nx.dev).
+**Video URL:** https://youtu.be/obCF6bywvRk
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+**Description:** Presentation from the Feb 9, 2021 Angular Boulder Meetup (online) that looks an introductory look Nx Workspaces with Angular Applications.  Nx is an open-source project for TypeScript monorepos (by Nrwl) with core plugins to include Angular, React and Node applications in one codebase.  Included is a live-coding example that shows creating an empty Nx workspace, then generating two basic Angular apps with a few app-specific libs and a shared lib to demonstrate a sample Nx architecture, using the Nx Console extension for VSCode, and a peek at Nx dependency graphs.
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+# Presentation Resources 
 
-## Adding capabilities to your workspace
+**Nrwl - Interactive Nx Tutorial with videos** (free)
+https://nx.dev/latest/angular/tutorial/01-create-application
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+**Nrwl - Nx Course on YouTube** (free)
+https://www.youtube.com/watch?time_continue=49&v=2mYLe9Kp9VM&feature=emb_logo
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+**Nrwl - 45-Minute Walkthrough on YouTube** (free)
+https://www.youtube.com/watch?v=h5FIGDn5YM0
 
-Below are our core plugins:
+**Egghead - Scale React Development with Nx** (free)
+https://egghead.io/lessons/javascript-create-an-express-backend-api-in-an-nx-workspace
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+**Udemy - Getting Started with Angular and Nrwl Nx** ($)
+https://www.udemy.com/share/1024P2A0AccFxaRH4=/
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+**Nrwl - Advanced Nx Workspaces** ($200)
+https://nxplaybook.com/p/advanced-nx-workspaces
 
-## Generate an application
+**Nrwl**
+https://nrwl.io
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+**Nx Docs**
+https://nx.dev
 
-> You can use any of the plugins above to generate applications as well.
+**Nx GitHub**
+https://github.com/nrwl/nx
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+**Nx NPM**
+https://www.npmjs.com/package/create-nx-workspace
 
-## Generate a library
+**Smarter & Faster Angular Development with Nx**
+https://www.youtube.com/watch?v=LEqJ1xKf_1w
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+**Angular Show Podcast - NX + NX Cloud**
+https://www.spreaker.com/user/ng-conf/e021-nx-nx-cloud
 
-> You can also use any of the plugins above to generate libraries as well.
+**AngularAir Podcast - Advanced Nx with Isaac Mann**
+https://www.youtube.com/watch?v=pcTSDMid-aE
 
-Libraries are shareable across libraries and applications. They can be imported from `@abm/mylib`.
+**AngularAir Podcast - Nx for Enterprise Angular Development with Victor Savkin**
+https://www.youtube.com/watch?v=qYNiOKDno_I
 
-## Development server
+**AngularAir Podcast - From Zero to However Far We Can Get With Nx**
+https://www.youtube.com/watch?v=0N589xX2ZQw
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+**eBook: (free) Enterprise Angular - Domain Driven Design, Nx Monorepos, and Micro Frontends 3rd Edition (Manfred Steyer)**
+https://www.angulararchitects.io/en/book/
 
-## Code scaffolding
+**eBook: (free) Enterprise Angular Monorepoo Patterns (Nrwl Connect)**
+https://connect.nrwl.io/app/books/enterprise-angular-monorepo-patterns
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+**YouTube - Nrwl channel (7 min - Oct 6, 2020): Modern Angular with Nx Dev Tools**
+https://www.youtube.com/watch?v=cXOkmOy-8dk
 
-## Build
+**Blog Post - Victor Savkin: Nx and Modern Angular**
+https://nx.dev/angular
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+**Twitter - @NxDevTools**
+https://twitter.com/NxDevTools
 
 
 
-## ☁ Nx Cloud
 
-### Computation Memoization in the Cloud
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
