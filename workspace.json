@@ -1,10 +1,373 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
+  "projects": {
+    "alpha": {
+      "projectType": "application",
+      "root": "apps/alpha",
+      "sourceRoot": "apps/alpha/src",
+      "prefix": "abm",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/alpha",
+            "index": "apps/alpha/src/index.html",
+            "main": "apps/alpha/src/main.ts",
+            "polyfills": "apps/alpha/src/polyfills.ts",
+            "tsConfig": "apps/alpha/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/alpha/src/favicon.ico",
+              "apps/alpha/src/assets"
+            ],
+            "styles": [
+              "apps/alpha/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/alpha/src/environments/environment.ts",
+                  "with": "apps/alpha/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "alpha:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "alpha:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "alpha:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/alpha/src/**/*.ts",
+              "apps/alpha/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/alpha"
+          ],
+          "options": {
+            "jestConfig": "apps/alpha/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "alpha-e2e": {
+      "root": "apps/alpha-e2e",
+      "sourceRoot": "apps/alpha-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/alpha-e2e/cypress.json",
+            "tsConfig": "apps/alpha-e2e/tsconfig.e2e.json",
+            "devServerTarget": "alpha:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "alpha:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/alpha-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "alpha-home": {
+      "projectType": "library",
+      "root": "libs/alpha/home",
+      "sourceRoot": "libs/alpha/home/src",
+      "prefix": "abm",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/alpha/home/src/**/*.ts",
+              "libs/alpha/home/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/alpha/home"
+          ],
+          "options": {
+            "jestConfig": "libs/alpha/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "alpha-contact": {
+      "projectType": "library",
+      "root": "libs/alpha/contact",
+      "sourceRoot": "libs/alpha/contact/src",
+      "prefix": "abm",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/alpha/contact/src/**/*.ts",
+              "libs/alpha/contact/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/alpha/contact"
+          ],
+          "options": {
+            "jestConfig": "libs/alpha/contact/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "beta": {
+      "projectType": "application",
+      "root": "apps/beta",
+      "sourceRoot": "apps/beta/src",
+      "prefix": "abm",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/beta",
+            "index": "apps/beta/src/index.html",
+            "main": "apps/beta/src/main.ts",
+            "polyfills": "apps/beta/src/polyfills.ts",
+            "tsConfig": "apps/beta/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/beta/src/favicon.ico",
+              "apps/beta/src/assets"
+            ],
+            "styles": [
+              "apps/beta/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/beta/src/environments/environment.ts",
+                  "with": "apps/beta/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "beta:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "beta:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "beta:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/beta/src/**/*.ts",
+              "apps/beta/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/beta"
+          ],
+          "options": {
+            "jestConfig": "apps/beta/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "beta-e2e": {
+      "root": "apps/beta-e2e",
+      "sourceRoot": "apps/beta-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/beta-e2e/cypress.json",
+            "tsConfig": "apps/beta-e2e/tsconfig.e2e.json",
+            "devServerTarget": "beta:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "beta:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/beta-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "beta-home": {
+      "projectType": "library",
+      "root": "libs/beta/home",
+      "sourceRoot": "libs/beta/home/src",
+      "prefix": "abm",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/beta/home/src/**/*.ts",
+              "libs/beta/home/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/beta/home"
+          ],
+          "options": {
+            "jestConfig": "libs/beta/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared": {
+      "projectType": "library",
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "prefix": "abm",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/src/**/*.ts",
+              "libs/shared/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "alpha"
 }

@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@abm/alpha/home": ["libs/alpha/home/src/index.ts"],
+      "@abm/alpha/contact": ["libs/alpha/contact/src/index.ts"],
+      "@abm/beta/home": ["libs/beta/home/src/index.ts"],
+      "@abm/shared": ["libs/shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
